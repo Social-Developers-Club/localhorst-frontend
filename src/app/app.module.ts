@@ -14,11 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentPlanCardComponent } from './chat/payment-plan-card.components';
 import { QuoteCardComponent } from './chat/quote-card.components';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
 import { HeaderComponent } from './header/header.component';
 import { SolutionOverviewComponent } from './solution-overview/solution-overview.component';
 import { HomeComponent } from './home/home.component';
@@ -41,11 +38,8 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ChatModule,
     ButtonModule,
-    MatToolbarModule,
     MatIconModule,
-    MatMenuModule,
     MatButtonModule,
-    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

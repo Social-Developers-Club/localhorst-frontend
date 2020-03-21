@@ -1,31 +1,17 @@
-<div class="container">
+<kendo-chat [messages]="feed | async" [user]="user" (sendMessage)="sendMessage($event)">
+  <ng-template kendoChatAttachmentTemplate let-att>
+    <ng-container [ngSwitch]="att.type">
 
-  <div class="row">
-    <div class="col-lg-4 col-md-4">
+      <quote-card *ngSwitchCase="'quote'" [quote]="att">
+      </quote-card>
 
-      <kendo-chat [messages]="feed | async" [user]="user" (sendMessage)="sendMessage($event)">
-        <ng-template kendoChatAttachmentTemplate let-att>
-          <ng-container [ngSwitch]="att.type">
+      <payment-plan-card *ngSwitchCase="'payment_plan'" [plan]="att">
+      </payment-plan-card>
 
-            <quote-card *ngSwitchCase="'quote'" [quote]="att">
-            </quote-card>
+      <kendo-chat-hero-card *ngSwitchDefault imageUrl="{{ att.images[0]?.url }}" [title]="att.title"
+        [subtitle]="att.subtitle" [actions]="att.buttons" (executeAction)="heroAction($event)">
+      </kendo-chat-hero-card>
 
-            <payment-plan-card *ngSwitchCase="'payment_plan'" [plan]="att">
-            </payment-plan-card>
-
-            <kendo-chat-hero-card *ngSwitchDefault imageUrl="{{ att.images[0]?.url }}" [title]="att.title"
-              [subtitle]="att.subtitle" [actions]="att.buttons" (executeAction)="heroAction($event)">
-            </kendo-chat-hero-card>
-
-          </ng-container>
-        </ng-template>
-      </kendo-chat>
-
-    </div>
-
-    <div class="col-lg-4 col-md-4">
-    </div>
-
-  </div>
-
-</div>
+    </ng-container>
+  </ng-template>
+</kendo-chat>
