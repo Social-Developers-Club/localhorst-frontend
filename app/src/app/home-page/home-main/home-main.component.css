@@ -1,0 +1,21 @@
+p {
+    color: #35529e;
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 70px;
+}
+
+.info-text {
+    align-self: center;
+    width: 80%;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.chat-wrapper {
+    height: 450px;
+}

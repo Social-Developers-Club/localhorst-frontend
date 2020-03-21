@@ -18,7 +18,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
 import { SolutionOverviewComponent } from './solution-overview/solution-overview.component';
-import { HomeComponent } from './home/home.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { HomeChecklistComponent } from './home-page/home-checklist/home-checklist.component';
+import { HomeMainComponent } from './home-page/home-main/home-main.component';
+import { HomeMoreInfoComponent } from './home-page/home-more-info/home-more-info.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HomeComponent } from './home/home.component';
     QuoteCardComponent,
     HeaderComponent,
     SolutionOverviewComponent,
-    HomeComponent,
+    HomePageComponent,
+    HomeChecklistComponent,
+    HomeMainComponent,
+    HomeMoreInfoComponent
   ],
   imports: [
     FlexLayoutModule,
