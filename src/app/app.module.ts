@@ -12,6 +12,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentPlanCardComponent } from './chat/payment-plan-card.components';
 import { QuoteCardComponent } from './chat/quote-card.components';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +31,10 @@ import { QuoteCardComponent } from './chat/quote-card.components';
     FormsModule,
     ChatModule,
     ButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
