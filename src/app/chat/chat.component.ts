@@ -22,7 +22,7 @@ export class ChatComponent {
   public readonly bot: User = {
     id: 0,
     name: 'Horsti',
-    avatarUrl: 'https://demos.telerik.com/kendo-ui/content/chat/avatar.png'
+    avatarUrl: 'assets/images/horsti.jpg'
   };
 
   private agent: Agent = new Agent(this.bot);
