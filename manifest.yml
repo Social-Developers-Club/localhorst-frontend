@@ -1,4 +1,6 @@
-applications:
-- name: localhorst
-  memory: 128M
-  buildpack: staticfile_buildpack
+applications :
+- name: "localhorst"
+  path : "dist/localhorst"
+  memory : 256M
+  buildpack :
+  - "https://github.com/cloudfoundry/staticfile-buildpack.git"
