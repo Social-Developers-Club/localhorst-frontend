@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from '@progress/kendo-angular-buttons';
 import { ChatModule } from '@progress/kendo-angular-conversational-ui';
@@ -17,6 +19,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
+import { HeaderComponent } from './header/header.component';
+import { SolutionOverviewComponent } from './solution-overview/solution-overview.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +29,12 @@ import { MatTabsModule } from '@angular/material/tabs';
     ChatComponent,
     PaymentPlanCardComponent,
     QuoteCardComponent,
+    HeaderComponent,
+    SolutionOverviewComponent,
+    HomeComponent,
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
