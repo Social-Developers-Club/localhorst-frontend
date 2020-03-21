@@ -10,6 +10,7 @@ import { Agent } from './agent';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.css']
 })
 export class ChatComponent {
   public feed: Observable<Message[]>;
