@@ -36,7 +36,7 @@ export class Agent {
 
     constructor(private user: User) {
         this.client = new ApiAiClient({
-            accessToken: '8375da127bef4334a4bb6583c729e3a9'
+            accessToken: 'eb48648d8886410ab35b07da87e097ab'
         });
 
         const req = this.client.eventRequest('Welcome');
