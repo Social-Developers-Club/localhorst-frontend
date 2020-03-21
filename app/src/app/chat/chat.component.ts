@@ -22,7 +22,7 @@ export class ChatComponent {
   public readonly bot: User = {
     id: 0,
     name: 'Horsti',
-    avatarUrl: 'assets/images/horsti.jpg'
+    avatarUrl: 'assets/images/uebergangs-horst.svg'
   };
 
   private agent: Agent = new Agent(this.bot);

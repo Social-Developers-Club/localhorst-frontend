@@ -1,9 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { 
+    height: 100%;
+    background-color: #f2f2f2; 
+}
+
 body { 
     margin: 0;
     font-family: neue-kabel, sans-serif;
     font-style: normal;
     font-weight: 100; 
+}
+
+.k-chat{
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    border-top-left-radius: 0px;;
+}
+
+.k-message-box {
+    border: none;
+    background-image: linear-gradient(to top, rgb(246,191,97) 0%, rgb(247, 218, 170) 50%);
+    line-height: 35px;
+    color: white !important;
+    padding: 15px 25px;
+}
+
+.k-input {
+    padding-left: 15px !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+.k-input::placeholder{
+    font-size: 18px;
+    color: white !important;
+}
+
+.k-quick-reply {
+    color: rgb(246,191,97) !important;
+    border-color: rgb(246,191,97) !important;
+}
+
+.k-quick-reply:hover {
+    background-color: rgb(246,191,97) !important;
+    color: white !important;
+}
+
+.k-no-avatar .k-bubble {
+    border: none;
+}
+
+.k-bubble {
+    color: #35529e !important;
+    background-color: #f2f2f2 !important; 
+}
+
+.k-button-send:hover {
+    color: white !important; 
 }
