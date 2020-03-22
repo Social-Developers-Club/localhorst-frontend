@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecommendationService } from 'src/app/services/recommendation.service';
+import { RecommendationResult } from 'src/app/models/recommendation-result';
 
 @Component({
   selector: 'app-solution-overview',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolutionOverviewComponent implements OnInit {
 
-  constructor() { }
+  recommendationResults : Array<RecommendationResult> = [];
+
+  constructor(private recommendationService: RecommendationService) { }
 
   ngOnInit(): void {
+    this.recommendationService.getAllRecommendations().subscribe(data => {
+      this.recommendationResults = data;
+    });
   }
 
 }
