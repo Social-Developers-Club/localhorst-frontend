@@ -19,7 +19,7 @@ The chatbot UI is build using components of the [kendo angular ui](https://www.t
 ## Build & Deployment
 The project is build using Angular, packed into Docker. The Angular README and manual can be found [here](/app/README.md).
 
-This is how to build and run the docker container:
+This is how to build the docker container:
 `docker build -t supportforlocalhorst/localhorst-frontend .`
 
 ### Note!
