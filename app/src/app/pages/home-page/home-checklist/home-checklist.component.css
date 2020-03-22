@@ -12,9 +12,10 @@ li {
 
 .box-wrapper {
     height: 100%;
-    background-color: #35529e;
+    background-color: var(--main-font-color);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    box-shadow: var(--main-box-shadow);
 }
 
 .close-button-wrapper {
@@ -28,7 +29,7 @@ li {
 .open-icon-text{
     padding-top: 6px;
     font-size: 20px;
-    color: #35529e;
+    color: var(--main-font-color);
 }
 
 .close-icon {
@@ -40,7 +41,7 @@ li {
 .open-icon {
     cursor: pointer;
     font-size: 35px;
-    color: #35529e; 
+    color: var(--main-font-color); 
 }
 
 .text-wrapper {

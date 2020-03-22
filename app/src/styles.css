@@ -4,6 +4,7 @@
     --main-bg-color: #f2f2f2;
     --main-color-yellow: rgb(246,191,97);
     --main-color-light-yellow: rgb(247, 218, 170);
+    --main-box-shadow: 2px 2px 5px #d8d8d8;
 }
 
 html, body { 
@@ -23,6 +24,7 @@ body {
     border: none;
     border-radius: 20px;
     border-top-left-radius: 0px;
+    box-shadow: var(--main-box-shadow);
 }
 
 p {
@@ -67,7 +69,7 @@ p {
 .k-bubble {
     color: var(--main-font-color) !important;
     background-color: var(--main-bg-color) !important; 
-    box-shadow: 2px 2px 5px #d8d8d8 !important;
+    box-shadow: var(--main-box-shadow) !important;
     border: none !important;
 }
 
