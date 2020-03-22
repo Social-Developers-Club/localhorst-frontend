@@ -25,6 +25,8 @@ import { HomeChecklistComponent } from './pages/home-page/home-checklist/home-ch
 import { HomeMainComponent } from './pages/home-page/home-main/home-main.component';
 import { HomeMoreInfoComponent } from './pages/home-page/home-more-info/home-more-info.component';
 import { MenuComponent } from './shared-components/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { MenuComponent } from './shared-components/menu/menu.component';
     MatButtonModule,
     MatInputModule,
     MatMenuModule,
+    MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
