@@ -1,12 +1,13 @@
 p {
     color: #35529e;
     text-align: center;
+    padding: 0;
 }
 
 .title {
     font-weight: bold;
-    font-size: 35px;
-    margin-top: 70px;
+    font-size: 25px;
+    margin-top: 55px;
 }
 
 .info-text {
@@ -23,5 +24,5 @@ p {
 }
 
 .chat-app-wrapper {
-    height: 450px;
+    max-height: 450px;
 }

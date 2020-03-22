@@ -48,15 +48,21 @@ body {
     color: white !important;
 }
 
-.k-no-avatar .k-bubble {
-    border: none;
-}
-
 .k-bubble {
     color: #35529e !important;
     background-color: #f2f2f2 !important; 
+    box-shadow: 2px 2px 5px #d8d8d8 !important;
+    border: none !important;
 }
 
 .k-button-send:hover {
     color: white !important; 
+}
+
+.k-author {
+    display: none;
+}
+
+.k-timestamp {
+    display: none;
 }

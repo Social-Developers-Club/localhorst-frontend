@@ -21,13 +21,30 @@ li {
     padding: 20px 20px 0 0 ;
 }
 
+.open-icon-wrapper{
+    margin-top: 20px;
+}
+
+.open-icon-text{
+    padding-top: 6px;
+    font-size: 20px;
+    color: #35529e;
+}
+
 .close-icon {
+    cursor: pointer;
     font-size: 35px;
     color: white;
 }
 
+.open-icon {
+    cursor: pointer;
+    font-size: 35px;
+    color: #35529e; 
+}
+
 .text-wrapper {
-    padding: 100px 30px 30px 30px;
+    padding: 100px 50px 30px 30px;
 }
 
 .list-wrapper {

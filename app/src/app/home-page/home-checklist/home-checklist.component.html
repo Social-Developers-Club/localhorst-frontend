@@ -1,6 +1,12 @@
-<div class="box-wrapper">
-    <div class="close-button-wrapper" fxLayoutAlign="flex-end">
-        <span class="material-icons close-icon">close</span>
+<div (mouseover)="showChecklistText=true" (mouseout)="showChecklistText=false" [hidden]="!isBoxClosed">
+    <div fxLayout="row" class="open-icon-wrapper">
+        <!-- <p class="open-icon-text" *ngIf="showChecklistText">Show</p> --> 
+        <span class="material-icons open-icon" (click)="toggleChecklist()">chevron_right</span>
+    </div>
+</div>
+<div class="box-wrapper" [hidden]="isBoxClosed">
+    <div class="close-button-wrapper" fxLayoutAlign="flex-end" >
+        <span class="material-icons close-icon" (click)="toggleChecklist()">close</span>
     </div>
     <div class="text-wrapper">
         <div>
@@ -9,10 +15,18 @@
         </div>
         <div class="list-wrapper">
             <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>sed diam nonumy eirmod tempor</li>
-                <li>invidunt ut labore et dolore magna aliquyam</li>
-                <li>sed diam voluptua</li>
+                <li>Wasch halt einfach deine Hände</li>
+                <li>Natürlich mit Seife</li>
+                <li>alles andere wäre echt blöd</li>
+                <li>So einfach ist das</li>
+                <li>Wasch halt einfach deine Hände</li>
+                <li>Natürlich mit Seife</li>
+                <li>alles andere wäre echt blöd</li>
+                <li>So einfach ist das</li>
+                <li>Wasch halt einfach deine Hände</li>
+                <li>Natürlich mit Seife</li>
+                <li>alles andere wäre echt blöd</li>
+                <li>So einfach ist das</li>
                 <li>Wasch halt einfach deine Hände</li>
                 <li>Natürlich mit Seife</li>
                 <li>alles andere wäre echt blöd</li>

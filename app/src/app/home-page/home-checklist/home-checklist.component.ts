@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeChecklistComponent implements OnInit {
 
+  isBoxClosed: boolean = false;
+  showChecklistText: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleChecklist(){
+    this.isBoxClosed = !this.isBoxClosed;
   }
 
 }
