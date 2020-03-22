@@ -19,11 +19,15 @@ The chatbot UI is build using components of the [kendo angular ui](https://www.t
 ## Build & Deployment
 The project is build using Angular, packed into Docker. The Angular README and manual can be found [here](/app/README.md).
 
-This is how to build the docker container:
-`docker build -t supportforlocalhorst/localhorst-frontend .`
+This is how to build the Docker image:
+```bash
+docker build -t supportforlocalhorst/localhorst-frontend .
+```
 
-### Note!
-To run the whole application locally and to use all features all the related backends(see below) need to be deployed. Also the `apiUrl` in the [RecommendationService](/app/src/app/services/recommendation.service.ts), which is used to access the chatbot backend, needs to be changed accordingly.
+:warning:
+This frontend application connects to two different backends. In order to run the frontend application locally, all related backend applications need to be deployed. See the README of [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend) on how to start the _backend_ and its associated database. The cahtbot backend (Dialogflow fulfillment) must be deployed in order to use the integrated chat bot within the frontend. For more on this application see [localhorst-chatbot-backend](https://github.com/Social-Developers-Club/localhorst-chatbot-backend).
+
+The frontend needs to know where its backend is running. For this purpose, the variable `apiRoot` in [RecommendationService.ts](/app/src/app/services/recommendation.service.ts) must point towards your local backend instance. After changing this variable's value, you'll have to rebuild the Angular frontend application.
 
 Also you can find the Docker image in [DockerHub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-frontend).
 
