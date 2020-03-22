@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --main-font-color: #35529e;
+    --main-bg-color: #f2f2f2;
+    --main-color-yellow: rgb(246,191,97);
+    --main-color-light-yellow: rgb(247, 218, 170);
+}
 
 html, body { 
     height: 100%;
-    background-color: #f2f2f2; 
+    background-color: var(--main-bg-color); 
 }
 
 body { 
@@ -20,7 +26,7 @@ body {
 }
 
 p {
-    color: #35529e;
+    color: var(--main-font-color);
 }
 
 @media only screen and (max-width: 480px) {
@@ -31,7 +37,7 @@ p {
 
 .k-message-box {
     border: none;
-    background-image: linear-gradient(to top, rgb(246,191,97) 0%, rgb(247, 218, 170) 50%);
+    background-image: linear-gradient(to top, var(--main-color-yellow) 0%, var(--main-color-light-yellow) 50%);
     line-height: 35px;
     color: white !important;
     padding: 15px 25px;
@@ -49,18 +55,18 @@ p {
 }
 
 .k-quick-reply {
-    color: rgb(246,191,97) !important;
-    border-color: rgb(246,191,97) !important;
+    color: var(--main-color-yellow) !important;
+    border-color: var(--main-color-yellow) !important;
 }
 
 .k-quick-reply:hover {
-    background-color: rgb(246,191,97) !important;
+    background-color: var(--main-color-yellow) !important;
     color: white !important;
 }
 
 .k-bubble {
-    color: #35529e !important;
-    background-color: #f2f2f2 !important; 
+    color: var(--main-font-color) !important;
+    background-color: var(--main-bg-color) !important; 
     box-shadow: 2px 2px 5px #d8d8d8 !important;
     border: none !important;
 }
