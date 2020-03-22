@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecommendationService } from 'src/app/services/recommendation.service';
 import { RecommendationResult } from 'src/app/models/recommendation-result';
+import { Element } from '@angular/compiler';
 
 @Component({
   selector: 'app-solution-overview',
@@ -17,9 +18,14 @@ export class SolutionOverviewComponent implements OnInit {
     this.recommendationService.getAllRecommendations().subscribe(data => {
       this.recommendationResults = data;
     });
+
+    
+
+
   }
 
   openCard(link: string){
+    // console.log("Karten: ",document.getElementsByClassName('card').item(1).setAttribute('background-color','green'));
     window.open(link);
   }
 

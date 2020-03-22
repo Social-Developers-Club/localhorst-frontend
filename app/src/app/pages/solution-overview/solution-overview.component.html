@@ -1,8 +1,8 @@
 <div fxLayoutAlign="center">
     <div fxLayout="row" fxLayoutGap="50px" *ngFor="let solution of recommendationResults">
         <div class="card" (click)="openCard(solution.doc.link)">
-            <div>
-                <img class="image" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <div class="image-wrapper image">
+                <img class="image" src="solution.doc.imageUrl">
             </div>
             <div class="card-text">
                 <p class="text title">{{ solution.doc.title | titlecase }}</p>

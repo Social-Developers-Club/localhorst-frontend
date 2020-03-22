@@ -6,7 +6,7 @@ import { Router, RouterEvent } from '@angular/router';
   templateUrl: './home-checklist.component.html',
   styleUrls: ['./home-checklist.component.css']
 })
-export class HomeChecklistComponent implements OnInit, AfterContentInit {
+export class HomeChecklistComponent implements OnInit {
 
   isBoxClosed: boolean = false;
   showChecklistText: boolean = false;
@@ -21,13 +21,7 @@ export class HomeChecklistComponent implements OnInit, AfterContentInit {
     })
   }
 
-  ngAfterContentInit(){
-    console.log("TEST", this.router.url);
-
-  }
-
   toggleChecklist(){
-    console.log("TEST",this.router.url);
     this.isBoxClosed = !this.isBoxClosed;
   }
 
