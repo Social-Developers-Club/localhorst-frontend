@@ -14,7 +14,7 @@ The source code itself is structured into the follwoing directorys:
 
 ## Dependencies
 The project uses [Angular Material](https://material.angular.io/) and [Material Icons](https://material.io/resources/icons/?style=baseline).
-The chatbot in the frontend is build using components of the [kendo angular ui](https://www.telerik.com/kendo-angular-ui/components/conversationalui/integrations/dialogflow/) framework, which we re-styled to achieve the look and feel fitting to the rest of the website.
+The chatbot UI is build using components of the [kendo angular ui](https://www.telerik.com/kendo-angular-ui/components/conversationalui/integrations/dialogflow/) framework, which we re-styled to achieve the look and feel fitting to the rest of the website.
 
 ## Build & Deployment
 The project is build using Angular, packed into Docker. The Angular README and manual can be found [here](/app/README.md).
