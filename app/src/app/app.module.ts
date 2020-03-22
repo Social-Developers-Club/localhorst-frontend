@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentPlanCardComponent } from './chat/payment-plan-card.components';
 import { QuoteCardComponent } from './chat/quote-card.components';
 
+import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
@@ -46,6 +47,7 @@ import { HomeMoreInfoComponent } from './home-page/home-more-info/home-more-info
     ButtonModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

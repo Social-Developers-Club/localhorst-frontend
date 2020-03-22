@@ -10,8 +10,14 @@
     </div>
     <div fxLayout="row" fxLayoutAlign="center">
         <img class="horst-img" src="assets/images/uebergangs-horst.svg">
-        <div class="chat-app-wrapper" >
+        <div class="chat-app-wrapper" [hidden]="requestUserName">
             <app-chat></app-chat>
+        </div>
+        <div class="user-name-bubble" [hidden]="!requestUserName">
+            <p class="user-name-text" >Bitte verrate mir doch deinen Namen,<br/>damit wir uns unterhalten können.</p>
+            <mat-form-field class="form-field">
+                <input #name matInput placeholder="Ich heiße" (keyup.enter)="saveName(name.value)">
+              </mat-form-field>
         </div>
     </div>
 </div>
