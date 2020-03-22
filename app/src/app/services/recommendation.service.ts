@@ -23,8 +23,8 @@ export class RecommendationService {
             item.id,
             item.score,
             new Recommendation(
-              item.doc.category, item.doc.recommendation,
-              item.doc.type, item.doc.industry, item.doc.link
+              item.doc.category, item.doc.title, item.doc.description,
+              item.doc.type, item.doc.industry, item.doc.link, item.doc.imageUrl
             )
           );
         });

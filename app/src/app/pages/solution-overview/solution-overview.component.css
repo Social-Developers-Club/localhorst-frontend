@@ -31,12 +31,6 @@
     background-color: white;
 }
 
-.image {
-    border-top-right-radius: var(--main-border-radius);
-    border-top-left-radius: var(--main-border-radius);
-    width: 250px;
-}
-
 .card-text {
     padding: 20px;
 }
