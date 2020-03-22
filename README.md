@@ -23,7 +23,7 @@ This is how to build and run the docker container:
 `docker build -t supportforlocalhorst/localhorst-frontend .`
 
 ### Note!
-To run the whole application and to use all the frontend features all the related backends(see below) need to be deployed. Also the `apiUrl` in the [RecommendationService](/app/src/app/services/recommendation.service.ts) needs to be changed accordingly.
+To run the whole application locally and to use all features all the related backends(see below) need to be deployed. Also the `apiUrl` in the [RecommendationService](/app/src/app/services/recommendation.service.ts), which is used to access the chatbot backend, needs to be changed accordingly.
 
 Also you can find the Docker image in [DockerHub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-frontend).
 
