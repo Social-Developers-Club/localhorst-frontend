@@ -25,7 +25,7 @@ docker build -t supportforlocalhorst/localhorst-frontend .
 ```
 
 :warning:
-This frontend application connects to two different backends. In order to run the frontend application locally, all related backend applications need to be deployed. See the README of [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend) on how to start the _backend_ and its associated database. The cahtbot backend (Dialogflow fulfillment) must be deployed in order to use the integrated chat bot within the frontend. For more on this application see [localhorst-chatbot-backend](https://github.com/Social-Developers-Club/localhorst-chatbot-backend).
+This frontend application connects to two different backends. In order to run the frontend application locally, all related backend applications need to be deployed. See the README of [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend) on how to start the _backend_ and its associated database. The chatbot backend (Dialogflow fulfillment) must be deployed in order to use the integrated chat bot within the frontend. For more on this application see [localhorst-chatbot-backend](https://github.com/Social-Developers-Club/localhorst-chatbot-backend).
 
 The frontend needs to know where its backend is running. For this purpose, the variable `apiRoot` in [RecommendationService.ts](/app/src/app/services/recommendation.service.ts) must point towards your local backend instance. After changing this variable's value, you'll have to rebuild the Angular frontend application.
 
