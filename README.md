@@ -15,7 +15,7 @@ The project is build as a Docker container.
 `docker container run --publish 8000:8080 --detach --name bb localhorst`
 
 ## Architecture
-![architecture overview diagram]()
+![architecture overview diagram](/Architecture.png)
 
 ## Related Repositories
 - [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend)
