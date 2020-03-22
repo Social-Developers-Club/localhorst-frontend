@@ -19,4 +19,8 @@ export class SolutionOverviewComponent implements OnInit {
     });
   }
 
+  openCard(link: string){
+    window.open(link);
+  }
+
 }

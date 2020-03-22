@@ -1,0 +1,30 @@
+.card {
+    margin: 0 20px;
+    width: 200px;
+    cursor: pointer;
+    background-color: #ff9c7f;
+    border-radius: var(--main-border-radius);
+}
+
+.title {
+    color: white;  
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.description {
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 200px;
+}
+
+.image {
+    border-top-right-radius: var(--main-border-radius);
+    border-top-left-radius: var(--main-border-radius);
+    width: 200px;
+}
+
+.card-text {
+    padding: 20px;
+}

@@ -1,5 +1,16 @@
 <div fxLayoutAlign="center">
-    <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let r of recommendationResults">
+    <div fxLayout="row" fxLayoutGap="50px" *ngFor="let r of recommendationResults">
+        <div class="card" (click)="openCard(r.doc.link)">
+            <div>
+                <img class="image" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            </div>
+            <div class="card-text">
+                <p class="title">{{ r.doc.type | titlecase }}</p>
+                <p class="description">{{ r.doc.recommendation }}</p>
+            </div>
+        </div>
+
+<!--
         <mat-card class="example-card">
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
@@ -16,5 +27,6 @@
                 <a href="{{ r.doc.link }}" target="_blank" mat-button>LINK</a>
             </mat-card-actions>
         </mat-card>
+        -->
     </div>
 </div>

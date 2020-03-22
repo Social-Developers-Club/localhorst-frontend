@@ -5,6 +5,7 @@
     --main-color-yellow: rgb(246,191,97);
     --main-color-light-yellow: rgb(247, 218, 170);
     --main-box-shadow: 2px 2px 5px #d8d8d8;
+    --main-border-radius: 20px;
 }
 
 html, body { 
@@ -22,7 +23,7 @@ body {
 .k-chat{
     background-color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--main-border-radius);
     border-top-left-radius: 0px;
     box-shadow: var(--main-box-shadow);
 }

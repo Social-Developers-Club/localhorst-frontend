@@ -4,7 +4,7 @@ import { SolutionOverviewComponent } from './pages/solution-overview/solution-ov
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  { path: 'Lösungen', component: SolutionOverviewComponent },
+  { path: 'Loesungen', component: SolutionOverviewComponent },
   { path: '', component: HomePageComponent }
 ];
 
