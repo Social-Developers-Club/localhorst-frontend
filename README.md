@@ -22,12 +22,15 @@ The project is build using Angular, packed into Docker. The Angular README and m
 This is how to build and run the docker container:
 `docker build -t supportforlocalhorst/localhorst-frontend .`
 
+### Note!
+To run the whole application and to use all the frontend features all the related [backends](#Realted-Repositories) need to be deployed. Also the `apiUrl` in the [RecommendationService](/app/src/app/services/recommendation.service.ts) needs to be changed accordingly.
+
 Also you can find the Docker image in [DockerHub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-frontend).
 
 ## Architecture
 ![architecture overview diagram](/Architecture.png)
 
-## Related Repositories
+## Related-Repositories
 - [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend)
 - [localhorst-chatbot-backend](https://github.com/Social-Developers-Club/localhorst-chatbot-backend)
 - [localhorst-elasticsearch](https://github.com/Social-Developers-Club/localhorst-elasticsearch)
