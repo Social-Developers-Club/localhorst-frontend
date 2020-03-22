@@ -11,9 +11,8 @@ The project is build using Angular, packed into Docker. The Angular README and m
 This is how to build and run the docker container:
 
 `docker build -t supportforlocalhorst/localhorst-frontend .`
-`docker push supportforlocalhorst/localhorst-frontend`
 
-Also you can find the Docker image in the [DockerHub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-frontend).
+Also you can find the Docker image in [DockerHub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-frontend).
 
 ## Architecture
 ![architecture overview diagram](/Architecture.png)
