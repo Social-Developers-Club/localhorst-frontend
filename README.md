@@ -1,5 +1,5 @@
 # Localhorst Frontend
-This  Repository contains the source code for the frontend, which is hosted here [here](http://support-for-localhorst.philenius.de/).
+This  Repository contains the source code for the frontend, which is hosted [here](http://support-for-localhorst.philenius.de/).
 
 ![](./design1.png)
 
