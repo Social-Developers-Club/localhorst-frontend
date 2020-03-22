@@ -1,7 +1,12 @@
 # Localhorst Frontend
 This  Repository contains the source code for the frontend, which is hosted here [here](http://support-for-localhorst.philenius.de/).
 
+![](./design1.png)
+
+![](./design2.png)
+
 ## About
+
 This project was develop during the [#wirvsvirus](https://wirvsvirushackathon.org/) hackathon. The whole idea and project is described
  in [devpost](https://devpost.com/software/1_016_a_lokale_unternehmen_support_your_localho-r-st).
 
@@ -32,7 +37,7 @@ The frontend needs to know where its backend is running. For this purpose, the v
 Also you can find the Docker image in [DockerHub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-frontend).
 
 ## Architecture
-![architecture overview diagram](/Architecture.png)
+![architecture overview diagram](./Architecture.png)
 
 ## Related-Repositories
 - [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend)
