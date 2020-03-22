@@ -4,10 +4,20 @@ p {
     padding: 0;
 }
 
+.page-wrapper {
+    height: 100%;
+}
+
 .title {
     font-weight: bold;
     font-size: 25px;
     margin-top: 55px;
+}
+
+@media only screen and (max-width: 480px) {
+    .title {
+        margin-top: 15px;
+    }
 }
 
 .info-text {
@@ -15,6 +25,13 @@ p {
     width: 80%;
     font-size: 20px;
     line-height: 35px;
+}
+
+@media only screen and (max-width: 480px) {
+    .info-text {
+        font-size: 15px;
+        line-height: 25px;
+    }
 }
 
 .horst-img {
@@ -27,6 +44,12 @@ p {
     max-height: 450px;
 }
 
+@media only screen and (max-height: 700px) {
+    .chat-app-wrapper {
+        max-height: 350px;
+    }
+}
+
 .user-name-bubble {
     margin-top: 82px;
     background-color: white;
@@ -34,6 +57,13 @@ p {
     border-top-left-radius: 0px;
     box-shadow: 2px 2px 5px white;
     padding: 12px 12px 0;
+}
+
+@media only screen and (max-width: 599px) {
+    .user-name-bubble {
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
 }
 
 .user-name-text {

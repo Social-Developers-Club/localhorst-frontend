@@ -5,3 +5,9 @@
 .main-app {
     width: 60%;
 }
+
+@media only screen and (max-width: 1000px) {
+    .main-app {
+        width: 100%;
+    }
+}
