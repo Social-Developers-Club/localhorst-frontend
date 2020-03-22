@@ -7,12 +7,6 @@ p {
     height: 100%;
 }
 
-.title {
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: 55px;
-}
-
 @media only screen and (max-width: 480px) {
     .title {
         margin-top: 15px;
@@ -45,7 +39,7 @@ p {
 
 @media only screen and (max-height: 700px) {
     .chat-app-wrapper {
-        max-height: 350px;
+        max-height: 300px;
     }
 }
 
