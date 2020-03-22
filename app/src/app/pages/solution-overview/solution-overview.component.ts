@@ -18,14 +18,10 @@ export class SolutionOverviewComponent implements OnInit {
     this.recommendationService.getAllRecommendations().subscribe(data => {
       this.recommendationResults = data;
     });
-
-    
-
-
   }
 
   openCard(link: string){
-    // console.log("Karten: ",document.getElementsByClassName('card').item(1).setAttribute('background-color','green'));
+    // console.log("Karten: ",document.getElementsByClassName('card').item(1).); //.setAttribute('background-color','green'));
     window.open(link);
   }
 
