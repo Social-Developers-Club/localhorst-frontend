@@ -12,4 +12,8 @@ export class HomeMoreInfoComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  openHackathonPage(){
+    window.open('https://wirvsvirushackathon.org/');
+  }
+
 }
