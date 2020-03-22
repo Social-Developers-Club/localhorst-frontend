@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/localstorage.service';
 
 @Component({
   selector: 'app-home-main',
@@ -10,19 +11,19 @@ export class HomeMainComponent implements OnInit {
   requestUserName: boolean = true;
   userName: string;
 
-  constructor() { }
+  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
     this.checkForUserName();
   }
 
   saveName(name: string){
-    localStorage.setItem('userName', name);
+    this.localStorageService.userName = name;
     this.checkForUserName();
   }
 
   checkForUserName(){
-    this.userName = localStorage.getItem('userName');
+    this.userName = this.localStorageService.userName;
 
     if (this.userName){
       this.requestUserName = false;

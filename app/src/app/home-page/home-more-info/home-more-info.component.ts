@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/localstorage.service';
 
 @Component({
   selector: 'app-home-more-info',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeMoreInfoComponent implements OnInit {
 
-  constructor() { }
+  user: string;
+
+  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+    this.localStorageService.userNameSubject.subscribe((value) => {
+      this.user = value;
+    })
   }
 
 }

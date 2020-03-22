@@ -1,1 +1,5 @@
-<p>home-more-info works!</p>
+<div class="wrapper">
+    <div *ngIf="user">
+        <p class="logged-in-msg">Eingeloggt als: {{user}}</p>
+    </div>
+</div>
