@@ -1,3 +1,11 @@
-.toolbar-spacer {
-    flex: 1 1 auto;
+.checklist {
+    height: 100%;
+    width: fit-content;
+    position: fixed;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
