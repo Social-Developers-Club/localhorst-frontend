@@ -13,7 +13,7 @@ The source code itself is structured into the follwoing directorys:
 - shared-components: contains components that are used inside multiple pages
 
 ## Dependencies
-The project uses Angular Material and Material Icons.
+The project uses [Angular Material](https://material.angular.io/) and [Material Icons](https://material.io/resources/icons/?style=baseline).
 The chatbot in the frontend is build using components of the [kendo angular ui](https://www.telerik.com/kendo-angular-ui/components/conversationalui/integrations/dialogflow/) framework, which we re-styled to achieve the look and feel fiting to the rest of the website.
 
 ## Build & Deployment
