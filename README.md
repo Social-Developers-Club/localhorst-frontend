@@ -1,17 +1,17 @@
 # Localhorst Frontend
-This  Repository contains the source code for the frontend.
+This  Repository contains the source code for the frontend, which is hosted here [here](http://support-for-localhorst.philenius.de/).
 
 ## About
 This project was develop during the [#wirvsvirus](https://wirvsvirushackathon.org/) hackathon. The whole idea and project is described
  in [devpost](https://devpost.com/software/1_016_a_lokale_unternehmen_support_your_localho-r-st).
 
 ## Build & Deployment
-The project is build as a Docker container.
+The project is build using Angular, packed into Docker. The Angular README and manual can be found [here](/app/README.md).
 
-### Build
+This is how to build and run the docker container:
+
 `docker image build -t localhorst .`
 
-### Run
 `docker container run --publish 8000:8080 --detach --name bb localhorst`
 
 ## Architecture
