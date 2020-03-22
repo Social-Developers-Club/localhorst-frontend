@@ -8,7 +8,7 @@ This project was develop during the [#wirvsvirus](https://wirvsvirushackathon.or
 ## Angular Project Structure
 The source code itself is structured into the follwoing directorys:
 - models: contains data models
-- pages: contains the components that build up a whole page
+- pages: contains the components that build up a single page
 - services: contains the used serives
 - shared-components: contains components that are used inside multiple pages
 
