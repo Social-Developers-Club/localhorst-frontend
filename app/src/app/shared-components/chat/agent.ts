@@ -8,7 +8,7 @@ import { Observable, Subject, from } from 'rxjs';
 
 import { ApiAiClient } from 'api-ai-javascript/es6/ApiAiClient';
 import { Message, User } from '@progress/kendo-angular-conversational-ui';
-import { SurveyResult } from '../models/survey-result';
+import { SurveyResult } from '../../models/survey-result';
 
 // See https://dialogflow.com/docs/reference/agent/message-objects
 const enum MessageType {

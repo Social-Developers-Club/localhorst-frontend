@@ -8,14 +8,8 @@ import { LocalStorageService } from 'src/app/services/localstorage.service';
 })
 export class HomeMoreInfoComponent implements OnInit {
 
-  user: string;
+  constructor() { }
 
-  constructor(private localStorageService: LocalStorageService) { }
-
-  ngOnInit(): void {
-    this.localStorageService.userNameSubject.subscribe((value) => {
-      this.user = value;
-    })
-  }
+  ngOnInit(): void { }
 
 }
