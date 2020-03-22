@@ -4,6 +4,7 @@
     cursor: pointer;
     background-color: #ff9c7f;
     border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
 }
 
 .text {
