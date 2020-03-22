@@ -33,4 +33,3 @@ Also you can find the Docker image in [DockerHub](https://hub.docker.com/reposit
 ## Related-Repositories
 - [localhorst-backend](https://github.com/Social-Developers-Club/localhorst-backend)
 - [localhorst-chatbot-backend](https://github.com/Social-Developers-Club/localhorst-chatbot-backend)
-- [localhorst-elasticsearch](https://github.com/Social-Developers-Club/localhorst-elasticsearch)
