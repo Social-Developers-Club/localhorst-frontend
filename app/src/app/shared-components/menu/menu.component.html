@@ -7,7 +7,8 @@
             <button mat-menu-item routerLink="/">Startseite</button>
             <button mat-menu-item routerLink="/Loesungen">Alle Unterstützungen</button>
             <button fxHide.gt-md mat-menu-item routerLink="/Checkliste">Checkliste</button>
-            <button mat-menu-item class="log-out-btn" (click)="logout()">Ausloggen</button>
+            <button *ngIf="user" mat-menu-item class="log-out-in-btn" (click)="logout()">Ausloggen</button>
+            <button *ngIf="!user" mat-menu-item class="log-out-in-btn" routerLink="/">Einloggen</button>
         </mat-menu>
         
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
