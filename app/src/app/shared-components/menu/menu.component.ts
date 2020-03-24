@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from 'src/app/services/localstorage.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,16 +10,16 @@ export class MenuComponent implements OnInit {
 
   user: string;
 
-  constructor(private localStorageService: LocalStorageService) { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
-    this.localStorageService.userNameSubject.subscribe((value) => {
-      this.user = value;
-    })
+    this.loginService.currentUser.subscribe((user: string) => {
+      this.user = user;
+    });
   }
 
   logout(){
-    this.localStorageService.userName = null;
+    this.loginService.logout();
   }
 
 }

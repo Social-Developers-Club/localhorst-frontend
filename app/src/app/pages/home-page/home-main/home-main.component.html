@@ -8,10 +8,19 @@
             <app-chat></app-chat>
         </div>
         <div class="user-name-bubble" [hidden]="!requestUserName">
-            <p class="user-name-text" >Bitte verrate mir doch deinen Namen,<br/>damit wir uns unterhalten können.</p>
-            <mat-form-field class="form-field">
-                <input #name matInput placeholder="Ich heiße" (keyup.enter)="saveName(name.value)">
-              </mat-form-field>
+            <p class="user-name-text" >Bitte logge dich ein,<br/>damit wir uns unterhalten können.</p>
+            <form [formGroup]='loginForm' (ngSubmit)="login()">
+                <mat-form-field class="form-field">
+                    <input matInput formControlName="username" placeholder="E-Mail" (keyup.enter)="login()">
+                </mat-form-field>
+                <br/>
+                <mat-form-field class="form-field">
+                    <input matInput formControlName="password" placeholder="Passwort" [type]="hide ? 'password' : 'text'" (keyup.enter)="login()">
+                    <button mat-icon-button matSuffix (click)="hide = !hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </form>
         </div>
     </div>
 </div>

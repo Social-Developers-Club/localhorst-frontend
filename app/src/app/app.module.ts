@@ -7,13 +7,14 @@ import { ChatComponent } from './shared-components/chat/chat.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from '@progress/kendo-angular-buttons';
 import { ChatModule } from '@progress/kendo-angular-conversational-ui';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentPlanCardComponent } from './shared-components/chat/payment-plan-card.components';
 import { QuoteCardComponent } from './shared-components/chat/quote-card.components';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -52,6 +53,7 @@ import { ChecklistContentComponent } from './shared-components/checklist/checkli
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     ChatModule,
     ButtonModule,
     MatIconModule,
@@ -60,6 +62,7 @@ import { ChecklistContentComponent } from './shared-components/checklist/checkli
     MatMenuModule,
     HttpClientModule,
     MatSelectModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
