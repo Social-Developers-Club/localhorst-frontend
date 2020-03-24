@@ -1,10 +1,21 @@
 .card {
-    margin: 0 20px;
+    margin: 0 30px;
     width: 250px;
     cursor: pointer;
-    background-color: #ff9c7f;
     border-radius: var(--main-border-radius);
     box-shadow: var(--main-box-shadow);
+}
+
+.light-red {
+    background-color: var(--main-color-light-red);
+}
+
+.yellow{
+    background-color: var(--main-color-yellow);
+} 
+
+.light-blue {
+    background-color: var(--main-color-light-blue);
 }
 
 .text {
@@ -13,6 +24,9 @@
 
 .solution-wrapper{
     overflow-x: scroll;
+    width: 920px;
+    display: flex;
+    margin: 0 auto;
 }
 
 .title {
@@ -26,13 +40,13 @@
 }
 
 .description {
+    padding-top: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
-    height: 200px;
 }
 
 .image{
-    height: 150px;
+    height: 200px;
     background-color: white;
     border-radius: var(--main-border-radius);
     border-bottom-left-radius: 0;
@@ -40,5 +54,6 @@
 }
 
 .card-text {
+    height: 220px;
     padding: 20px;
 }

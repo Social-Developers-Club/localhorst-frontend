@@ -1,6 +1,9 @@
-<div class="solution-wrapper" fxLayoutAlign="center">
+<div class="solution-wrapper">
     <div fxLayout="row" *ngFor="let solution of recommendationResults">
-        <div class="card" (click)="openCard(solution.doc.link)">
+        <div class="card" [ngClass]="{'light-red': solution.color === 1, 
+        'yellow': solution.color === 2, 
+        'light-blue': solution.color === 3}" 
+        (click)="openCard(solution.doc.link)">
             <div class="image" style="background: url({{ solution.doc.imageUrl }}); background-size: cover;">
             </div>
             <div class="card-text">

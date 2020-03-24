@@ -6,6 +6,8 @@
     --main-color-light-yellow: rgb(247, 218, 170);
     --main-box-shadow: 2px 2px 5px #d8d8d8;
     --main-border-radius: 20px;
+    --main-color-light-red: #ff9c7f;
+    --main-color-light-blue: #82a8f4;
 }
 
 html, body { 

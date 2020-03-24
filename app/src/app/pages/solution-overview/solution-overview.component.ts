@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecommendationService } from 'src/app/services/recommendation.service';
 import { RecommendationResult } from 'src/app/models/recommendation-result';
 import { Element } from '@angular/compiler';
+import { Recommendation } from 'src/app/models/recommendation';
 
 @Component({
   selector: 'app-solution-overview',
@@ -16,12 +17,23 @@ export class SolutionOverviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.recommendationService.getAllRecommendations().subscribe(data => {
+      this.setColors(data);
       this.recommendationResults = data;
     });
   }
 
+  setColors(data: Array<RecommendationResult>){
+    let index: number = 1;
+    data.forEach(item => {
+      if (index === 4){
+        index = 1;
+      }
+      item.color = index;
+      index++;
+    });
+  }
+
   openCard(link: string){
-    // console.log("Karten: ",document.getElementsByClassName('card').item(1).); //.setAttribute('background-color','green'));
     window.open(link);
   }
 
