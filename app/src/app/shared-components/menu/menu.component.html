@@ -6,6 +6,7 @@
         <mat-menu #appMenu="matMenu">
             <button mat-menu-item routerLink="/">Startseite</button>
             <button mat-menu-item routerLink="/Loesungen">Alle Unterstützungen</button>
+            <button fxHide.gt-md mat-menu-item routerLink="/Checkliste">Checkliste</button>
             <button mat-menu-item class="log-out-btn" (click)="logout()">Ausloggen</button>
         </mat-menu>
         

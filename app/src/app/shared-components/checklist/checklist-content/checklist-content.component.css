@@ -1,0 +1,38 @@
+.text-wrapper {
+    padding: 100px 50px 30px 30px;
+}
+
+.list-wrapper {
+    margin-top: 70px;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.sub-title {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+p, li {
+    color: white;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    p, li {
+        color: var(--main-font-color);
+    }
+
+    .text-wrapper {
+        padding: 20px;
+    }
+}

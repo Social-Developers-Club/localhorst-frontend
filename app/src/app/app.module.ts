@@ -27,6 +27,8 @@ import { HomeMoreInfoComponent } from './pages/home-page/home-more-info/home-mor
 import { MenuComponent } from './shared-components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
+import { ChecklistPageComponent } from './pages/checklist-page/checklist-page.component';
+import { ChecklistContentComponent } from './shared-components/checklist/checklist-content/checklist-content.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { MatSelectModule } from '@angular/material/select';
     HomeMainComponent,
     HomeMoreInfoComponent,
     MenuComponent,
+    ChecklistPageComponent,
+    ChecklistContentComponent,
   ],
   imports: [
     FlexLayoutModule,
