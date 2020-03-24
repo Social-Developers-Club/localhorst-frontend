@@ -1,4 +1,4 @@
-<div class="filter" fxLayoutGap="130px" fxLayoutAlign="center">
+<div class="filter" fxLayout.lt-md="column" fxLayoutGap.gt-sm="130px" fxLayoutAlign="center">
     <mat-form-field>
         <mat-label>Typ</mat-label>
         <mat-select multiple>
@@ -22,7 +22,7 @@
 </div>
 
 <div class="solution-wrapper">
-    <div fxLayout="row" *ngFor="let solution of recommendationResults">
+    <div fxLayout="row" fxLayout.lt-md="column" *ngFor="let solution of recommendationResults">
         <div class="card" [ngClass]="{'light-red': solution.color === 1, 
         'yellow': solution.color === 2, 
         'light-blue': solution.color === 3}" 

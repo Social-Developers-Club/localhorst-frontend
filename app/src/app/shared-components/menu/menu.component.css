@@ -6,3 +6,8 @@
 .menu-icon {
     color: var(--main-font-color);
 }
+
+
+.log-out-btn {
+    border-top: 1px solid var(--main-font-color);
+}

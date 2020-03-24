@@ -14,7 +14,9 @@ export class HomeMainComponent implements OnInit {
   constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
-    this.checkForUserName();
+    this.localStorageService.userNameSubject.subscribe(() => {
+      this.checkForUserName();
+    })
   }
 
   saveName(name: string){
@@ -27,6 +29,8 @@ export class HomeMainComponent implements OnInit {
 
     if (this.userName){
       this.requestUserName = false;
+    } else {
+      this.requestUserName = true;
     }
   }
 

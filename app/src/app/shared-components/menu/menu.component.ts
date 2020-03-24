@@ -18,4 +18,8 @@ export class MenuComponent implements OnInit {
     })
   }
 
+  logout(){
+    this.localStorageService.userName = null;
+  }
+
 }
