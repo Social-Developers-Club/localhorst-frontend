@@ -1,13 +1,7 @@
-.logged-in-msg {
-    font-size: 15px;
-    margin: 12px 0 0;
-}
-
 .menu-icon {
     color: var(--main-font-color);
 }
 
-
-.log-out-in-btn {
-    border-top: 1px solid var(--main-font-color);
+.user-menu-item {
+    border-bottom: 1px solid var(--main-font-color);
 }

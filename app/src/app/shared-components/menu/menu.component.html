@@ -1,18 +1,27 @@
-<div fxLayout="row">
-    <div *ngIf="user">
-        <p class="logged-in-msg">Eingeloggt als: {{user}}</p>
-    </div>
-    <div>
-        <mat-menu #appMenu="matMenu">
-            <button mat-menu-item routerLink="/">Startseite</button>
-            <button mat-menu-item routerLink="/Loesungen">Alle Unterstützungen</button>
-            <button fxHide.gt-md mat-menu-item routerLink="/Checkliste">Checkliste</button>
-            <button *ngIf="user" mat-menu-item class="log-out-in-btn" (click)="logout()">Ausloggen</button>
-            <button *ngIf="!user" mat-menu-item class="log-out-in-btn" routerLink="/">Einloggen</button>
-        </mat-menu>
-        
-        <button mat-icon-button [matMenuTriggerFor]="appMenu">
-            <mat-icon class="menu-icon">menu</mat-icon>
-        </button>
-    </div>
+<div>
+    <mat-menu #appMenuNoUser="matMenu">
+        <button mat-menu-item class="user-menu-item" routerLink="/">Einloggen</button>
+        <button mat-menu-item routerLink="/">Startseite</button>
+        <button mat-menu-item routerLink="/Loesungen">Alle Unterstützungen</button>
+        <button fxHide.gt-md mat-menu-item routerLink="/Checkliste">Checkliste</button>
+    </mat-menu>
+
+    <mat-menu #appMenuUser="matMenu">
+        <button mat-menu-item class="user-menu-item" [matMenuTriggerFor]="userMenu">{{user}}</button>
+        <button mat-menu-item routerLink="/">Startseite</button>
+        <button mat-menu-item routerLink="/Loesungen">Alle Unterstützungen</button>
+        <button fxHide.gt-md mat-menu-item routerLink="/Checkliste">Checkliste</button>
+    </mat-menu>
+
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item disabled>Einstellungen</button>
+        <button *ngIf="user" mat-menu-item (click)="logout()">Ausloggen</button>
+    </mat-menu>
+    
+    <button *ngIf="!user" mat-icon-button [matMenuTriggerFor]="appMenuNoUser">
+        <mat-icon class="menu-icon">menu</mat-icon>
+    </button>
+    <button *ngIf="user" mat-icon-button [matMenuTriggerFor]="appMenuUser">
+        <mat-icon class="menu-icon">menu</mat-icon>
+    </button>
 </div>
