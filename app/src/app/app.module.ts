@@ -21,7 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './shared-components/header/header.component';
 import { SolutionOverviewComponent } from './pages/solution-overview/solution-overview.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { HomeChecklistComponent } from './pages/home-page/home-checklist/home-checklist.component';
+import { ChecklistComponent } from './shared-components/checklist/checklist.component';
 import { HomeMainComponent } from './pages/home-page/home-main/home-main.component';
 import { HomeMoreInfoComponent } from './pages/home-page/home-more-info/home-more-info.component';
 import { MenuComponent } from './shared-components/menu/menu.component';
@@ -37,7 +37,7 @@ import { MatCardModule } from '@angular/material/card';
     HeaderComponent,
     SolutionOverviewComponent,
     HomePageComponent,
-    HomeChecklistComponent,
+    ChecklistComponent,
     HomeMainComponent,
     HomeMoreInfoComponent,
     MenuComponent,

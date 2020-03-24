@@ -2,11 +2,11 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 
 @Component({
-  selector: 'app-home-checklist',
-  templateUrl: './home-checklist.component.html',
-  styleUrls: ['./home-checklist.component.css']
+  selector: 'app-checklist',
+  templateUrl: './checklist.component.html',
+  styleUrls: ['./checklist.component.css']
 })
-export class HomeChecklistComponent implements OnInit {
+export class ChecklistComponent implements OnInit {
 
   isBoxClosed: boolean = false;
   showChecklistText: boolean = false;
