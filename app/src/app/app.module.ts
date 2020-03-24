@@ -26,7 +26,7 @@ import { HomeMainComponent } from './pages/home-page/home-main/home-main.compone
 import { HomeMoreInfoComponent } from './pages/home-page/home-more-info/home-more-info.component';
 import { MenuComponent } from './shared-components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -54,8 +54,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatInputModule,
     MatMenuModule,
-    MatCardModule,
     HttpClientModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,26 @@
+<div class="filter" fxLayoutGap="130px" fxLayoutAlign="center">
+    <mat-form-field>
+        <mat-label>Typ</mat-label>
+        <mat-select multiple>
+          <mat-option *ngFor="let type of typeFilter" [value]="type">{{type}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Kategorie</mat-label>
+        <mat-select multiple>
+          <mat-option *ngFor="let category of categoryFilter" [value]="category">{{category}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Industrie</mat-label>
+        <mat-select multiple>
+          <mat-option *ngFor="let industry of industryFilter" [value]="industry">{{industry}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
 <div class="solution-wrapper">
     <div fxLayout="row" *ngFor="let solution of recommendationResults">
         <div class="card" [ngClass]="{'light-red': solution.color === 1, 

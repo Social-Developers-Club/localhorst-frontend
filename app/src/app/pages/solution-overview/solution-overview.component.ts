@@ -3,6 +3,9 @@ import { RecommendationService } from 'src/app/services/recommendation.service';
 import { RecommendationResult } from 'src/app/models/recommendation-result';
 import { Element } from '@angular/compiler';
 import { Recommendation } from 'src/app/models/recommendation';
+import { Category } from 'src/app/models/enums/category';
+import { Industry } from 'src/app/models/enums/industry';
+import { Type } from 'src/app/models/enums/type';
 
 @Component({
   selector: 'app-solution-overview',
@@ -12,6 +15,14 @@ import { Recommendation } from 'src/app/models/recommendation';
 export class SolutionOverviewComponent implements OnInit {
 
   recommendationResults : Array<RecommendationResult> = [];
+
+  categoryFilter: Array<Category> = [Category.business, Category.financial];
+  industryFilter: Array<Industry> = [Industry.culture, Industry.freelancer, Industry.restaurants, Industry.retail, Industry.service];
+  typeFilter: Array<Type> = [Type.info, Type.solution];
+
+  type;
+  category;
+  industry;
 
   constructor(private recommendationService: RecommendationService) { }
 

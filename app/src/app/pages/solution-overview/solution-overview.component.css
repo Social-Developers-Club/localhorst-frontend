@@ -22,11 +22,11 @@
     color: white;
 }
 
-.solution-wrapper{
+.solution-wrapper {
     overflow-x: scroll;
     width: 920px;
     display: flex;
-    margin: 0 auto;
+    margin: 50px auto 0;
 }
 
 .title {
