@@ -4,13 +4,13 @@ import { RecommendationResult } from '../models/recommendation-result';
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
 import { Recommendation } from '../models/recommendation';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecommendationService {
-  private apiRoot = 'http://sfl-backend.philenius.de';
-  private apiUrl = `${this.apiRoot}/recommendations/`;
+  private apiUrl = environment.backendUrl + environment.recommendationsPath;
 
   constructor(private http: HttpClient) { }
 
