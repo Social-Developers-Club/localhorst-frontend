@@ -24,7 +24,7 @@ export class RecommendationService {
     );
   }
 
-  public getRecommendations(type: Array<string>, category: Array<string>, industry: Array<string>): Observable<RecommendationResult[]>{
+  public getRecommendations(type: string, category: string, industry: Array<string>): Observable<RecommendationResult[]>{
     const params =  {
       type: type ? type : '',
       category: category ? category : '',

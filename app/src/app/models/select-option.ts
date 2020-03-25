@@ -5,5 +5,5 @@ import { Type } from './enums/type';
 
 export interface SelectOption{
   id: string,
-  name: Type | Category | Industry  
+  name: Type | Category | Industry | string 
 }

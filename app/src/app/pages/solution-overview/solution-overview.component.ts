@@ -17,15 +17,17 @@ export class SolutionOverviewComponent implements OnInit {
 
   recommendationResults : Array<RecommendationResult> = [];
 
-  categoryFilter: Array<SelectOption> = [{id:'business', name: Category.business}, {id:'financial', name: Category.financial}];
+  // complete selection lists
+  categoryFilter: Array<SelectOption> = [{id:'', name: 'Alle'}, {id:'business', name: Category.business}, {id:'financial', name: Category.financial}];
   industryFilter: Array<SelectOption> = [{id:'culture', name: Industry.culture}, {id:'freelancer', name: Industry.freelancer}, 
                                         {id:'restaurants', name: Industry.restaurants}, {id:'retail', name: Industry.retail},
                                         {id:'service', name: Industry.service}];
-  typeFilter: Array<SelectOption> = [{id:'info', name: Type.info}, {id:'solution', name: Type.solution}];
+  typeFilter: Array<SelectOption> = [{id:'', name: 'Alle'}, {id:'info', name: Type.info}, {id:'solution', name: Type.solution}];
 
-  type: Array<Type>;
-  category: Array<Category>;
-  industry: Array<Industry>;
+  // values of select fields
+  type: SelectOption = this.typeFilter[0];
+  category: SelectOption = this.categoryFilter[0];
+  industry: Array<SelectOption> = [];
 
   constructor(private recommendationService: RecommendationService) { }
 
@@ -34,7 +36,8 @@ export class SolutionOverviewComponent implements OnInit {
   }
 
   filter(){
-    this.recommendationService.getRecommendations(this.type, this.category, this.industry).subscribe(data => {
+    const industrys: Array<string> = this.industry.map(item => item.id);
+    this.recommendationService.getRecommendations(this.type.id, this.category.id, industrys).subscribe(data => {
       this.setColors(data);
       this.recommendationResults = data;
     });
