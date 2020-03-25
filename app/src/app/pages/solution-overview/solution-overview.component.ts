@@ -6,6 +6,7 @@ import { Recommendation } from 'src/app/models/recommendation';
 import { Category } from 'src/app/models/enums/category';
 import { Industry } from 'src/app/models/enums/industry';
 import { Type } from 'src/app/models/enums/type';
+import { SelectOption } from 'src/app/models/select-option';
 
 @Component({
   selector: 'app-solution-overview',
@@ -16,24 +17,30 @@ export class SolutionOverviewComponent implements OnInit {
 
   recommendationResults : Array<RecommendationResult> = [];
 
-  categoryFilter: Array<Category> = [Category.business, Category.financial];
-  industryFilter: Array<Industry> = [Industry.culture, Industry.freelancer, Industry.restaurants, Industry.retail, Industry.service];
-  typeFilter: Array<Type> = [Type.info, Type.solution];
+  categoryFilter: Array<SelectOption> = [{id:'business', name: Category.business}, {id:'financial', name: Category.financial}];
+  industryFilter: Array<SelectOption> = [{id:'culture', name: Industry.culture}, {id:'freelancer', name: Industry.freelancer}, 
+                                        {id:'restaurants', name: Industry.restaurants}, {id:'retail', name: Industry.retail},
+                                        {id:'service', name: Industry.service}];
+  typeFilter: Array<SelectOption> = [{id:'info', name: Type.info}, {id:'solution', name: Type.solution}];
 
-  type;
-  category;
-  industry;
+  type: Array<Type>;
+  category: Array<Category>;
+  industry: Array<Industry>;
 
   constructor(private recommendationService: RecommendationService) { }
 
   ngOnInit(): void {
-    this.recommendationService.getAllRecommendations().subscribe(data => {
+    this.filter();
+  }
+
+  filter(){
+    this.recommendationService.getRecommendations(this.type, this.category, this.industry).subscribe(data => {
       this.setColors(data);
       this.recommendationResults = data;
     });
   }
 
-  setColors(data: Array<RecommendationResult>){
+  private setColors(data: Array<RecommendationResult>){
     let index: number = 1;
     data.forEach(item => {
       if (index === 4){

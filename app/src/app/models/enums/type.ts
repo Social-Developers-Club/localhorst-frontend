@@ -1,6 +1,6 @@
 export enum Type {
 
-    info = 'Informationen',
+    info = 'Information',
 
     solution = 'Lösungen'
     

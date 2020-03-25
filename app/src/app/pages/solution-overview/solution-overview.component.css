@@ -68,3 +68,8 @@
     height: 220px;
     padding: 20px;
 }
+
+.no-results-msg {
+    width: 100%;
+    text-align: center;
+}
