@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { ChecklistPageComponent } from './pages/checklist-page/checklist-page.component';
 import { ChecklistContentComponent } from './shared-components/checklist/checklist-content/checklist-content.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ChecklistContentComponent } from './shared-components/checklist/checkli
     MenuComponent,
     ChecklistPageComponent,
     ChecklistContentComponent,
+    TruncatePipe,
   ],
   imports: [
     FlexLayoutModule,
