@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://sfl-backend.philenius.de',
-  recommendationsPath: '/recommendations'
+  apiHost: 'https://support-for-localhorst.philenius.de',
 };
 
 /*

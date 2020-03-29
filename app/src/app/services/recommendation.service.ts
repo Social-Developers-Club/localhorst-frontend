@@ -10,7 +10,11 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class RecommendationService {
-  private apiUrl = environment.backendUrl + environment.recommendationsPath;
+
+  // In development mode, we define a backend URL through the configuration file 'environment.ts'.
+  // For delopyment on a server / localhost, we assume that frontend and backend run on the same host and port.
+  private apiHost = environment.apiHost ? environment.apiHost : `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
+  private apiUrl = `${this.apiHost}/api/recommendations`;
 
   constructor(private http: HttpClient) { }
 
