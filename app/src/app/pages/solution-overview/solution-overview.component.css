@@ -101,6 +101,7 @@ mat-grid-list.xs {
     font-size: 1.2rem;
     text-overflow: ellipsis;
     overflow: hidden;
+    height: 5rem;
 }
 
 .card-actions {

@@ -34,12 +34,12 @@
 
             <div class="card-image">
                 <p class="text type">{{ solution.doc.type | titlecase }}</p>
-                <div class="image" style="background: url({{ solution.doc.imageUrl }}); background-size: cover">
+                <div class="image" style="background: url(assets/images/{{ solution.doc.imageUrl }}); background-size: cover">
                 </div>
             </div>
         
             <div class="card-text">
-                <p class="text title">{{ solution.doc.title | titlecase | truncate:35 }}</p>
+                <p class="text title">{{ solution.doc.title | titlecase | truncate:32 }}</p>
                 <p class="text description">{{ solution.doc.description | truncate:100 }}</p>
             </div>
         
