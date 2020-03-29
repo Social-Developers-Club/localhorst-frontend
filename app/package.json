@@ -32,6 +32,7 @@
     "@progress/kendo-theme-default": "latest",
     "api-ai-javascript": "^2.0.0-beta.21",
     "dialogflow": "^1.2.0",
+    "ngx-ellipsis": "^2.1.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

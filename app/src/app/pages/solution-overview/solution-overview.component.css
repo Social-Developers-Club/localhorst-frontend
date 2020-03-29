@@ -90,23 +90,21 @@ mat-grid-list.xs {
 }
 
 .card-text .title {
-    height: 6rem;
+    height: 6.5rem;
     font-weight: bold;
     line-height: 1;
     font-size: 2rem;
 }
 
 .card-text .description {
-    padding-top: 0.5rem;
     font-size: 1.2rem;
     text-overflow: ellipsis;
     overflow: hidden;
-    height: 5rem;
+    height: 5.5rem;
 }
 
-.card-actions {
-    margin-left: 1.7rem;
-    margin-bottom: 2rem;
+.card-text .actions {
+    margin-bottom: 0.5rem;
 }
 
 a.mat-raised-button {

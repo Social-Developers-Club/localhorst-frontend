@@ -39,12 +39,9 @@
             </div>
         
             <div class="card-text">
-                <p class="text title">{{ solution.doc.title | titlecase | truncate:32 }}</p>
-                <p class="text description">{{ solution.doc.description | truncate:100 }}</p>
-            </div>
-        
-            <div class="card-actions">
-                <a mat-raised-button routerLink="." href="{{ solution.doc.link }}">LINK</a>
+                <p class="text title" ellipsis>{{ solution.doc.title | titlecase }}</p>
+                <p class="text description" ellipsis>{{ solution.doc.description }}</p>
+                <a class="text actions" mat-raised-button routerLink="." href="{{ solution.doc.link }}">LINK</a>
             </div>
         </div>
 

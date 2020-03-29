@@ -33,6 +33,8 @@ import { ChecklistPageComponent } from './pages/checklist-page/checklist-page.co
 import { ChecklistContentComponent } from './shared-components/checklist/checklist-content/checklist-content.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
 
+import { EllipsisModule } from 'ngx-ellipsis';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +69,7 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     MatSelectModule,
     MatFormFieldModule,
     MatGridListModule,
+    EllipsisModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
