@@ -72,7 +72,15 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "local-deployment": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local-deployment.ts"
+                }
+              ]
+            }  
           }
         },
         "serve": {
