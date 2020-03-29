@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list'; 
 import { HeaderComponent } from './shared-components/header/header.component';
 import { SolutionOverviewComponent } from './pages/solution-overview/solution-overview.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -65,6 +66,7 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     HttpClientModule,
     MatSelectModule,
     MatFormFieldModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
