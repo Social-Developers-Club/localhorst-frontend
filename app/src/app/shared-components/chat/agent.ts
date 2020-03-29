@@ -51,7 +51,6 @@ export class Agent {
 
     private onResponse(response: any): void {
         // See https://dialogflow.com/docs/fulfillment
-        console.log('response:', JSON.stringify(response));
         const fulfillment = response.result.fulfillment;
         if (!fulfillment) {
             return;

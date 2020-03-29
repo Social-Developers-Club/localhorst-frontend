@@ -52,7 +52,7 @@ p {
     background-color: white;
     border-radius: var(--main-border-radius);
     border-top-left-radius: 0px;
-    box-shadow: 2px 2px 5px white;
+    box-shadow: var(--main-box-shadow);
     padding: 12px 12px 0;
 }
 

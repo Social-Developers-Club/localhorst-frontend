@@ -41,7 +41,6 @@ export class SolutionOverviewComponent implements OnInit {
 
     this.mediaWatcher = this.mediaObserver.media$.subscribe((change: MediaChange) => {
       this.activeMediaQueryAlias = change.mqAlias;
-      console.log(this.activeMediaQueryAlias);
       this.numberOfCols = 3;
       if (this.activeMediaQueryAlias == 'sm') {
         this.numberOfCols = 2;
