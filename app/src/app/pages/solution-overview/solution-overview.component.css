@@ -1,8 +1,10 @@
 .card {
-    margin: 0 30px;
-    width: 250px;
+    width: 19rem;
     cursor: pointer;
-    border-radius: var(--main-border-radius);
+    border-top-left-radius: var(--main-border-radius);
+    border-top-right-radius: var(--main-border-radius);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     box-shadow: var(--main-box-shadow);
 }
 
@@ -23,53 +25,99 @@
         width: fit-content;
         margin: 0 auto;
     }
-
-    .solution-wrapper {
-        width: 100% !important;
-    }
 }
 
 .text {
     color: white;
 }
 
-.solution-wrapper {
-    overflow-x: scroll;
-    width: 920px;
-    display: flex;
-    margin: 50px auto 20px;
+mat-grid-list.lg, mat-grid-list.xl {
+    /*margin-left: 20vw;
+    margin-right: 20vw;*/
+    width: 70rem;
+    margin: 0 auto;
 }
 
-.title {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 2px;
+mat-grid-list.md {
+    width: 60rem;
+    margin: 0 auto;
 }
 
-.type {
-    font-size: 15px;
+mat-grid-list.sm {
+    width: 100%;
+    margin: 0 auto;
 }
 
-.description {
-    padding-top: 10px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+mat-grid-list.xs {
+    width: 100%;
+    margin: 0 auto;
 }
 
-.image{
-    height: 200px;
+/* lower every 2nd card by 4rem */
+@media only screen and (min-width: 960px) {
+    mat-grid-tile:nth-of-type(3n-1) {
+        margin-top: 4rem;
+    }
+}
+
+.card-image {
+    position: relative;
+}
+
+.card-image .image{
+    height: 15rem;
     background-color: white;
     border-radius: var(--main-border-radius);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;;
 }
 
+.card-image .type {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
 .card-text {
-    height: 220px;
-    padding: 20px;
+    padding-bottom: 0;
+    margin: 1.7rem;
+    font-size: 1rem;
+}
+
+.card-text .title {
+    height: 6rem;
+    font-weight: bold;
+    line-height: 1;
+    font-size: 2rem;
+}
+
+.card-text .description {
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-actions {
+    margin-left: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+a.mat-raised-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .no-results-msg {
     width: 100%;
     text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 6rem;
+    line-height: 1;
 }

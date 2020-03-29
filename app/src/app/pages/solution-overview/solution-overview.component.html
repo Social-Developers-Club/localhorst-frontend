@@ -2,41 +2,51 @@
     <mat-form-field>
         <mat-label>Typ</mat-label>
         <mat-select (selectionChange)="filter()" [(value)]="type">
-          <mat-option *ngFor="let type of typeFilter" [value]="type">{{type.name}}</mat-option>
+            <mat-option *ngFor="let type of typeFilter" [value]="type">{{type.name}}</mat-option>
         </mat-select>
     </mat-form-field>
 
     <mat-form-field>
         <mat-label>Kategorie</mat-label>
         <mat-select (selectionChange)="filter()" [(value)]="category">
-          <mat-option *ngFor="let category of categoryFilter" [value]="category">{{category.name}}</mat-option>
+            <mat-option *ngFor="let category of categoryFilter" [value]="category">{{category.name}}</mat-option>
         </mat-select>
     </mat-form-field>
 
     <mat-form-field>
         <mat-label>Industrie</mat-label>
         <mat-select multiple (selectionChange)="filter()" [(value)]="industry">
-          <mat-option *ngFor="let industry of industryFilter" [value]="industry">{{industry.name}}</mat-option>
+            <mat-option *ngFor="let industry of industryFilter" [value]="industry">{{industry.name}}</mat-option>
         </mat-select>
     </mat-form-field>
 </div>
 
-<div class="solution-wrapper">
-    <div fxLayout="row" fxLayout.lt-md="column" *ngFor="let solution of recommendationResults">
+<div *ngIf="recommendationResults.length === 0" class="no-results-msg">
+    <p>Es wurden leider keine Ergebnisse gefunden!</p>
+</div>
+
+<mat-grid-list *ngIf="recommendationResults.length > 0" [cols]="numberOfCols" rowHeight="40rem" [class]="activeMediaQueryAlias">
+    <mat-grid-tile *ngFor="let solution of recommendationResults" [colspan]="1" [rowspan]="1">
+
         <div class="card" [ngClass]="{'light-red': solution.color === 1, 
         'yellow': solution.color === 2, 
-        'light-blue': solution.color === 3}" 
-        (click)="openCard(solution.doc.link)">
-            <div class="image" style="background: url({{ solution.doc.imageUrl }}); background-size: cover;">
-            </div>
-            <div class="card-text">
-                <p class="text title">{{ solution.doc.title | titlecase }}</p>
+        'light-blue': solution.color === 3}" (click)="openCard(solution.doc.link)">
+
+            <div class="card-image">
                 <p class="text type">{{ solution.doc.type | titlecase }}</p>
-                <p class="text description">{{ solution.doc.description }}</p>
+                <div class="image" style="background: url({{ solution.doc.imageUrl }}); background-size: cover">
+                </div>
+            </div>
+        
+            <div class="card-text">
+                <p class="text title">{{ solution.doc.title | titlecase | truncate:35 }}</p>
+                <p class="text description">{{ solution.doc.description | truncate:100 }}</p>
+            </div>
+        
+            <div class="card-actions">
+                <a mat-raised-button routerLink="." href="{{ solution.doc.link }}">LINK</a>
             </div>
         </div>
-    </div>
-    <div *ngIf="recommendationResults.length === 0" class="no-results-msg">
-        <p>Es wurden leider keine Ergebnisse gefunden!</p>
-    </div>
-</div>
+
+    </mat-grid-tile>
+</mat-grid-list>
