@@ -21,11 +21,23 @@
     </mat-form-field>
 </div>
 
-<div *ngIf="recommendationResults.length === 0" class="no-results-msg">
+<div id="loading-row" *ngIf="isLoading">
+    <svg viewBox="0 0 100 100">
+        <rect x="0" y="0" width="100%" height="0.1rem" fill="#82a8f4">
+        </rect>
+        <rect x="0" y="0" width="5%" height="0.1rem" fill="#35529e">
+            <animate attributeName="x" from="0" to="100%" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="width" to="50%" dur="2s" repeatCount="indefinite" />
+        </rect>
+    </svg>
+</div>
+
+<div *ngIf="(recommendationResults.length === 0) && !isLoading" class="no-results-msg">
     <p>Es wurden leider keine Ergebnisse gefunden!</p>
 </div>
 
-<mat-grid-list *ngIf="recommendationResults.length > 0" [cols]="numberOfCols" rowHeight="40rem" [class]="activeMediaQueryAlias">
+<mat-grid-list *ngIf="recommendationResults.length > 0" [cols]="numberOfCols" rowHeight="40rem"
+    [class]="activeMediaQueryAlias">
     <mat-grid-tile *ngFor="let solution of recommendationResults" [colspan]="1" [rowspan]="1">
 
         <div class="card" [ngClass]="{'light-red': solution.color === 1, 
@@ -34,10 +46,11 @@
 
             <div class="card-image">
                 <p class="text type">{{ solution.doc.type | titlecase }}</p>
-                <div class="image" style="background: url(assets/images/{{ solution.doc.imageUrl }}); background-size: cover">
+                <div class="image"
+                    style="background: url(assets/images/{{ solution.doc.imageUrl }}); background-size: cover">
                 </div>
             </div>
-        
+
             <div class="card-text">
                 <p class="text title" ellipsis>{{ solution.doc.title | titlecase }}</p>
                 <p class="text description" ellipsis>{{ solution.doc.description }}</p>

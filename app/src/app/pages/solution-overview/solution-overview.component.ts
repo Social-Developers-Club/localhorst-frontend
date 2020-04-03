@@ -17,6 +17,7 @@ import { Subscription } from 'rxjs';
 export class SolutionOverviewComponent implements OnInit {
 
   recommendationResults: Array<RecommendationResult> = [];
+  isLoading = true;
 
   // complete selection lists
   categoryFilter: Array<SelectOption> = [{ id: '', name: 'Alle' }, { id: 'business', name: Category.business }, { id: 'financial', name: Category.financial }];
@@ -57,7 +58,9 @@ export class SolutionOverviewComponent implements OnInit {
 
   filter() {
     const industrys: Array<string> = this.industry.map(item => item.id);
+    this.isLoading = true;
     this.recommendationService.getRecommendations(this.type.id, this.category.id, industrys).subscribe(data => {
+      this.isLoading = false;
       this.setColors(data);
       this.recommendationResults = data;
     });
